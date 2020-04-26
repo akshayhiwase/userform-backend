@@ -87,10 +87,6 @@ app.get("/user", async (req, res) => {
 })
 
 
-
-
-
-
 let port = 4000;
 app.listen(port, () => {
     console.log("Listenig from server" + port)
