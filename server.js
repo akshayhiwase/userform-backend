@@ -73,8 +73,6 @@ app.delete("/user/:id", async (req, res) => {
 app.get("/user", async (req, res) => {
 
     try {
-        console.log(req.query);
-
         const user = await User.find({
             "email": req.query.mail
         })
