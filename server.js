@@ -84,12 +84,6 @@ app.get("/user", async (req, res) => {
 
 })
 
-
-// app.patch('/user/:id', function (req, res) {
-//     var updateObject = req.body; // {last_name : "smith", age: 44}
-//     var id = req.params.id;
-//     db.users.update({_id  : ObjectId(id)}, {$set: updateObject});
-// });
 app.patch("/adduser/:id", async (req, res) => {
 
     try {
