@@ -85,6 +85,26 @@ app.get("/user", async (req, res) => {
 })
 
 
+// app.patch('/user/:id', function (req, res) {
+//     var updateObject = req.body; // {last_name : "smith", age: 44}
+//     var id = req.params.id;
+//     db.users.update({_id  : ObjectId(id)}, {$set: updateObject});
+// });
+app.patch("/adduser/:id", async (req, res) => {
+
+    try {
+        const newUser = req.body;
+        res.status(201).json({
+            success: true,
+            data: newUser
+        })
+    } catch (err) {
+        console.log('err occured : ', err);
+
+    }
+
+})
+
 let port = 4000;
 app.listen(port, () => {
     console.log("Listenig from server" + port)
